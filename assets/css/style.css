@@ -14,8 +14,15 @@ header {
 }
 
 header h1 {
+  position: relative;
   display: inline-block;
   font-size: 48px;
+}
+
+#self_photo {
+  display:flex
+  width: 100px;
+  height: 130px;
 }
 
 header nav {
