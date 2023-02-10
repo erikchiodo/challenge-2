@@ -98,24 +98,8 @@ main {
 }
 
 .projects-wrapper {
-  background-color: gray;
   width: 70%;
   height: 70%;
-}
-
-@media screen and (max-width: 800px) {
-  .container {
-    width: 500px;
-  }
-  .heading_sections {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-  }
-  .projects-section {
-    /* display: flex; */
-    flex-direction: column;
-  }
 }
 
 .heading_sections > h2 {
@@ -123,17 +107,16 @@ main {
   text-align: left;
   padding-right: 10px;
   float: left;
-  background-color: bisque;
-}
-
-.project-container:first-child {
-  /* max-width: 400px; */
+  background-color: rgba(134, 157, 181, 0.665);
+  color: whitesmoke;
 }
 
 .projects-bottom {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
 }
 .projects-bottom .project-container {
   display: flex;
@@ -145,33 +128,62 @@ main {
   width: 100%;
   height: 300px;
   position: relative;
-  background-color: pink;
+  justify-content: center;
+}
+
+.bottom-project-container {
+  display: flex;
+  width: 50%;
+  height: 300px;
+  position: relative;
+  justify-content: center;
+}
+
+.bottom-project-image {
+  padding: 10px;
+  width: 80%;
+  height: 80%;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: lightslategray;
 }
 
 .projects_header {
   flex: 0 0 10%;
   text-align: left;
   padding-right: 40px;
-  background-color: bisque;
+  background-color: rgba(134, 157, 181, 0.665);
+  color: whitesmoke;
 }
 
 .project-label {
   position: absolute;
   width: 150px;
   height: 50px;
-  background-color: beige;
+  background-color: whitesmoke;
   bottom: 5%;
   display: flex;
   z-index: 1;
   justify-content: center;
   align-items: center;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: lightslategray;
 }
 
 .project-image {
+  padding: 10px;
   width: 300px;
   height: 300px;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: lightslategray;
 }
 .project-image:hover {
+  filter: brightness(0.5);
+}
+
+.bottom-project-image:hover {
   filter: brightness(0.5);
 }
 
@@ -181,6 +193,7 @@ main {
 
 p {
   font-size: 20px;
+  padding-left: 30px;
 }
 
 footer {
@@ -212,4 +225,25 @@ footer nav ul {
 
 footer nav ul li {
   padding: 0px 10px;
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 500px;
+  }
+  .heading_sections {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+  }
+  .projects-section {
+    /* display: flex; */
+    flex-direction: column;
+  }
+
+  .bottom-project-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
