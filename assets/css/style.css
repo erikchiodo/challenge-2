@@ -7,7 +7,7 @@ body {
   margin: 0px;
 }
 
-/* Header Styling */
+/* Header Banner Styling */
 header {
   display: flex;
   align-items: center;
@@ -24,6 +24,8 @@ header {
   height: 100%;
   align-items: center;
 }
+
+/* Header Text */
 header h1 {
   position: relative;
   display: inline-block;
@@ -33,6 +35,7 @@ header h1 {
   padding: 0;
 }
 
+/* Styling for Self Photo */
 #self_photo {
   display: flex;
   padding-left: 20px;
@@ -55,6 +58,7 @@ header nav ul {
   display: flex;
   flex-direction: row;
 }
+
 header nav ul li {
   padding: 0px 10px;
 }
@@ -63,14 +67,11 @@ a {
   color: whitesmoke;
 }
 
+/* Header Text Hover Highlights */
 a:hover {
   text-decoration-color: blanchedalmond;
   color: bisque;
 }
-/* header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-} */
 
 main {
   margin-top: 20px;
@@ -90,6 +91,7 @@ main {
   align-items: stretch;
 }
 
+/* Setting flex for entire body section */
 .projects-section {
   display: flex;
   flex-direction: row;
@@ -97,11 +99,13 @@ main {
   width: 100%;
 }
 
+/* Setting width/height for Project Section */
 .projects-wrapper {
   width: 70%;
   height: 70%;
 }
 
+/* Header styling for About Me Title */
 .heading_sections > h2 {
   flex: 0 0 10%;
   text-align: left;
@@ -111,6 +115,7 @@ main {
   color: whitesmoke;
 }
 
+/* Stlying for bottom 4 photos (non-Challenge 1 Photo) */
 .projects-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -157,13 +162,13 @@ main {
 }
 
 .project-label {
-  position: absolute;
+  position: absolute; /* Ensuring label is fixed in place within image*/
   width: 150px;
   height: 50px;
   background-color: whitesmoke;
   bottom: 5%;
   display: flex;
-  z-index: 1;
+  z-index: 1; /*Setting position of the highlights for image (ensuring image is only item highlighted*/
   justify-content: center;
   align-items: center;
   border-style: dashed;
@@ -180,11 +185,11 @@ main {
   border-color: lightslategray;
 }
 .project-image:hover {
-  filter: brightness(0.5);
+  filter: brightness(0.5); /* highlight effect on Challenge 1 image*/
 }
 
 .bottom-project-image:hover {
-  filter: brightness(0.5);
+  filter: brightness(0.5); /* highlight effect on bottom 4 photos*/
 }
 
 .heading_sections img {
@@ -236,14 +241,9 @@ footer nav ul li {
     justify-content: left;
     flex-direction: column;
   }
-  .projects-section {
-    /* display: flex; */
+  .bottom-project-container,
+  .project-label,
+  .bottom-project-image {
     flex-direction: column;
-  }
-
-  .bottom-project-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
 }
