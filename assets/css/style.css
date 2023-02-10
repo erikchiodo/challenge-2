@@ -3,26 +3,43 @@
 }
 
 body {
-  background-color: whitesmoke;
+  /* background-color: red; */
+  margin: 0px;
 }
 
+/* Header Styling */
 header {
-  padding: 20px;
-  font-family: "Calbri";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-family: "Helvetica";
   background-color: rgba(134, 157, 181, 0.665);
   color: black;
+  height: 150px;
 }
 
+.header-left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
 header h1 {
   position: relative;
   display: inline-block;
   font-size: 48px;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
 }
 
 #self_photo {
-  display:flex
-  width: 100px;
-  height: 130px;
+  display: flex;
+  padding-left: 20px;
+  /* width: 100px; */
+  height: 100%;
+  width: auto;
+  /* height: 130px; */
 }
 
 header nav {
@@ -35,8 +52,21 @@ header nav {
 
 header nav ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li {
+  padding: 0px 10px;
 }
 
+a {
+  color: whitesmoke;
+}
+
+a:hover {
+  text-decoration-color: blanchedalmond;
+  color: bisque;
+}
 /* header nav ul li {
   display: inline-block;
   margin-left: 25px;
@@ -45,9 +75,11 @@ header nav ul {
 main {
   margin-top: 20px;
   margin-bottom: 20px;
-  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+.container {
+  width: 900px;
 }
 
 .heading_sections {
@@ -58,83 +90,103 @@ main {
   align-items: stretch;
 }
 
+.projects-section {
+  display: flex;
+  flex-direction: row;
+  /* background-color: gray; */
+  width: 100%;
+}
+
+.projects-wrapper {
+  background-color: gray;
+  width: 70%;
+  height: 70%;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 500px;
+  }
+  .heading_sections {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+  }
+  .projects-section {
+    /* display: flex; */
+    flex-direction: column;
+  }
+}
+
 .heading_sections > h2 {
   flex: 0 0 10%;
-  text-align: right;
+  text-align: left;
   padding-right: 10px;
+  float: left;
+  background-color: bisque;
 }
 
-.project_section {
+.project-container:first-child {
+  /* max-width: 400px; */
+}
+
+.projects-bottom {
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
 }
-
-.images {
+.projects-bottom .project-container {
   display: flex;
-  align-items: flex-end;
-  /* min-height: 150px;
-  max-height: 150px; */
-  padding: 0 0 30px 0;
-  margin: 10px;
-  /* flex-basis: calc(50% - 1em); */
-  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.project-container {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color: pink;
 }
 
-.images:first-child {
-  flex-basis: 100%;
-  /* max-width: 400px; */
+.projects_header {
+  flex: 0 0 10%;
+  text-align: left;
+  padding-right: 40px;
+  background-color: bisque;
+}
+
+.project-label {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background-color: beige;
+  bottom: 5%;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  width: 300px;
+  height: 300px;
+}
+.project-image:hover {
+  filter: brightness(0.5);
 }
 
 .heading_sections img {
   width: 400px;
 }
 
-/* aside {
-  display: flex;
-  flex: 30%;
-  background-color: #b9c6ae;
-  padding: 20px;
-} */
-
-/* /* .images {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  margin: 0 auto;
-  border-width: 2px;
-} */
-/* 
-.card {
-  padding: 10px;
-  width: 250px;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-}  */
-/* 
-.card img {
-  width: 100%;
-} */
-
-/* section {
-  display: flex;
-  flex: 70%;
-  background-color: #fff;
-  padding: 20px;
-}
-
-section header {
-  padding: 20px;
-  background: #13293d;
-  color: #fff;
-} */
-
 p {
   font-size: 20px;
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
   background: rgba(134, 157, 181, 0.665);
   color: #fff;
@@ -142,4 +194,22 @@ footer {
 
 footer h2 {
   text-align: left;
+}
+
+footer nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+footer nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+footer nav ul li {
+  padding: 0px 10px;
 }
