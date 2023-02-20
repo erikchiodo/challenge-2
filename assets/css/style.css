@@ -233,18 +233,34 @@ footer nav ul li {
   padding: 0px 10px;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 951px) {
   .container {
     width: 500px;
-  }
-  .heading_sections {
     display: flex;
     justify-content: left;
     flex-direction: column;
   }
-  .bottom-project-container,
+
+  .projects-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
   .project-label,
-  .bottom-project-image {
+  .bottom-project-image,
+  .projects-wrapper,
+  .projects-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-project-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 }
