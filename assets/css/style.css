@@ -264,3 +264,17 @@ footer nav ul li {
     flex-direction: column;
   }
 }
+
+/* .project-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+}
+
+.projects-wrapper .project-container {
+  display: inline-block;
+} */
